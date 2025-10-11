@@ -40,6 +40,20 @@
         <a id="mailIcon" href="mailto:jegadeshram28505@gmail.com" title="Send an Email">
             <i class="fas fa-envelope"></i>
         </a>
+      <script>
+   
+    const mailIcon = document.getElementById('mailIcon');
+
+   
+    mailIcon.addEventListener('click', function() {
+        
+        const emailAddress = 'jegadeshram28505@gmail.com';
+        const subject = 'Inquiry from your Website';
+
+       
+        window.location.href = `mailto:${emailAddress}?subject=${subject}`;
+    });
+</script>
         <a href="https://www.linkedin.com/in/jegadeesh-r-22a99b2a1" target="_blank" title="LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
