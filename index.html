@@ -32,6 +32,37 @@
   <div class="hero-photo">
     <img src="1.png.jpg" alt="My Photo" class="profile-pic">
   </div>
+  <div class="social-links-overlay">
+        <a href="mailto:your.email@gmail.com" target="_blank" title="Gmail">
+          <i id="mailIcon" class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/jegadeesh-r-22a99b2a1" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a id="contact-link" href="" title="Phone">
+        <i class="fas fa-phone"></i>
+    </a>
+    <script>
+      const contactLink = document.getElementById("contact-link");
+  const phoneNumber = "+918667216411"; // 🔹 Replace with your number (include country code)
+
+  function isMobileDevice() {
+    return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  }
+
+  if (isMobileDevice()) {
+    // 📱 Mobile → Open phone dialer
+    contactLink.href = `tel:${phoneNumber}`;
+  } else {
+    // 💻 Desktop → Open WhatsApp Web
+    contactLink.href = `https://wa.me/${phoneNumber}`;
+    contactLink.target = "_blank";
+  }
+    </script>
+         <a href="https://github.com/jegadeshram28505-art" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+    </div>
 </section>
 <section class="home-intro">
   <h2>Welcome 👋</h2>
