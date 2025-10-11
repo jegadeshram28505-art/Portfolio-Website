@@ -103,7 +103,7 @@ contactForm.addEventListener("submit", function(event) {
 const mailIcon = document.getElementById('mailIcon');
 
 mailIcon.addEventListener('click', function() {
-    const recipientEmail = 'your.email@example.com';
+    const recipientEmail = 'jegadeshram28505@gmail.com';
     const subject = 'Inquiry from Website';
     const body = 'Hello, I would like to know more.';
 
