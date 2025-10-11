@@ -113,19 +113,4 @@ mailIcon.addEventListener('click', function() {
     
     window.open(gmailUrl, '_blank');
 });
-const contactLink = document.getElementById("contact-link");
-  const phoneNumber = "+918667216411"; // 🔹 Replace with your number (include country code)
-
-  function isMobileDevice() {
-    return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-  }
-
-  if (isMobileDevice()) {
-    // 📱 Mobile → Open phone dialer
-    contactLink.href = `tel:${phoneNumber}`;
-  } else {
-    // 💻 Desktop → Open WhatsApp Web
-    contactLink.href = `https://wa.me/${phoneNumber}`;
-    contactLink.target = "_blank";
-  }
 
