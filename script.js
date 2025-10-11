@@ -100,17 +100,4 @@ contactForm.addEventListener("submit", function(event) {
 
   contactForm.reset(); // Form fields clear panna
 });
-const mailIcon = document.getElementById('mailIcon');
-
-mailIcon.addEventListener('click', function() {
-    const recipientEmail = 'jegadeshram28505@gmail.com';
-    const subject = 'Inquiry from Website';
-    const body = 'Hello, I would like to know more.';
-
-    
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipientEmail}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
-    
-    window.open(gmailUrl, '_blank');
-});
 
