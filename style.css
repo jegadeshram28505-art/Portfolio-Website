@@ -1026,3 +1026,77 @@ footer {
 
 
 
+/* ===== Social Media Icon Styles ===== */
+
+/* Photo-kum icons-kum gap create panna */
+.hero-photo {
+  margin-bottom: 40px; 
+}
+
+/* Social media icons varum section */
+.social-links-overlay {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.social-links-overlay a {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-links-overlay a i {
+  color: white;
+  font-size: 28px;
+}
+
+/* --- Original Brand Colors --- */
+.social-links-overlay a[href*="linkedin.com"] {
+  background-color: hwb(228 0% 30%);
+}
+.social-links-overlay a[href*="mailto:"] {
+  background-color: #DB4437;
+}
+.social-links-overlay a[href*="tel:"] {
+  background-color: hwb(103 46% 7%);
+}
+.social-links-overlay a[href*="github.com"] {
+  background-color: #333;
+}
+.social-links-overlay a:hover {
+  transform: scale(1.15) translateY(-5px);
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* Indha padding value-a maathunga */
+  padding: 150px 20px 40px; 
+}
+/* Ippo icons container-ku neradiya margin kuduthu keela irakalam */
+.social-links-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 50px;
+  /* PUDHUSA INDHA MARGIN-TOP ADD PANNUNGA */
+  margin-top: 50px; 
+}
+#contact-link i {
+  background-color: green; /* 🔹 Green background */
+  color: white;            /* 🔹 White icon color */
+  padding: 10px;           /* 🔹 Add some space around icon */
+  border-radius: 50%;      /* 🔹 Make it circular */
+  transition: 0.3s;        /* 🔹 Smooth hover effect */
+}
+
+#contact-link i:hover {
+  background-color: darkgreen; /* 🔹 Slightly darker on hover */
+}
