@@ -59,32 +59,34 @@ const appearOnScroll = new IntersectionObserver(function(entries, observer) {
 faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
+// One-time Typing Effect
+const text = "Full Stack Developer 💻";
+let index = 0;
+const typingElement = document.querySelector(".typing-text");
 
-// script.js
-const contactForm = document.querySelector(".contact-form");
+function typeEffect() {
+  if (!typingElement) return;
 
-// 👇 இந்த if கண்டிஷனை சேர்க்கவும்
-if (contactForm) {
-  contactForm.addEventListener("submit", function(event) {
-    event.preventDefault(); // Page reload prevent
+  if (index < text.length) {
+    typingElement.textContent += text.charAt(index);
+    index++;
+    setTimeout(typeEffect, 120); // typing speed
+  }
+}
 
-    // Form data get panna
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
-    const message = document.getElementById("message").value;
+typeEffect();
 
-    // Data object
-    const formData = {
-      name: name,
-      email: email,
-      phone: phone,
-      message: message
-    };
+const mailIcon = document.getElementById('mailIcon');
 
-    console.log("Contact Form Data Submitted:", formData); // Console la display aagum
-    alert("Form submitted! Check console.");
+mailIcon.addEventListener('click', function() {
+    const recipientEmail = 'your.email@example.com';
+    const subject = 'Inquiry from Website';
+    const body = 'Hello, I would like to know more.';
 
-    contactForm.reset(); // Form fields clear panna
-  });
-} // 👈 if கண்டிஷனை இங்கே முடிக்கவும்
+    
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipientEmail}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    
+    window.open(gmailUrl, '_blank');
+});
+
