@@ -59,22 +59,6 @@ const appearOnScroll = new IntersectionObserver(function(entries, observer) {
 faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
-// One-time Typing Effect
-const text = "Full Stack Developer 💻";
-let index = 0;
-const typingElement = document.querySelector(".typing-text");
-
-function typeEffect() {
-  if (!typingElement) return;
-
-  if (index < text.length) {
-    typingElement.textContent += text.charAt(index);
-    index++;
-    setTimeout(typeEffect, 120); // typing speed
-  }
-}
-
-typeEffect();
 
 const mailIcon = document.getElementById('mailIcon');
 
