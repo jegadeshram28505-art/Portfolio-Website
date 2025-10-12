@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
   
   <script src="script.js" defer></script>
-  
+  <script src="home-script.js"></script>
 </head>
 <body>
 
@@ -37,23 +37,24 @@
       <img src="1.png.jpg" alt="My Photo" class="profile-pic">
     </div>
     <div class="social-links-overlay">
-        <a id="mailIcon" href="mailto:jegadeshram28505@gmail.com" title="Send an Email">
-            <i class="fas fa-envelope"></i>
-        </a>
-      <script>
-   
-    const mailIcon = document.getElementById('mailIcon');
+        <a id="mailIcon" href="" target="_blank" title="Gmail">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail Icon" style="width:24px; height:auto;">
+</a>
+        <script>
+          const mailIcon = document.getElementById('mailIcon');
 
-   
-    mailIcon.addEventListener('click', function() {
-        
-        const emailAddress = 'jegadeshram28505@gmail.com';
-        const subject = 'Inquiry from your Website';
+mailIcon.addEventListener('click', function() {
+    const recipientEmail = 'jegadeshram28505@gmail.com';
+    const subject = 'Inquiry from Website';
+    const body = 'Hello, I would like to know more.';
 
-       
-        window.location.href = `mailto:${emailAddress}?subject=${subject}`;
-    });
-</script>
+    
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipientEmail}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    
+    window.open(gmailUrl, '_blank');
+});
+        </script>
         <a href="https://www.linkedin.com/in/jegadeesh-r-22a99b2a1" target="_blank" title="LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
