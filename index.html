@@ -37,27 +37,27 @@
       <img src="1.png.jpg" alt="My Photo" class="profile-pic">
     </div>
     <div class="social-links-overlay">
-        <a id="mailIcon" href="javascript:void(0);" target="_blank" title="Gmail">
+        <a id="mailIcon" href="#" target="_blank" title="Gmail">
   <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail Icon" style="width:24px; height:auto;">
 </a>
         <script>
   const mailIcon = document.getElementById('mailIcon');
 
   mailIcon.addEventListener('click', function(event) {
-    event.preventDefault(); // prevent default anchor behavior
+    event.preventDefault();
 
     const recipientEmail = 'jegadeshram28505@gmail.com';
     const subject = 'Inquiry from Website';
     const body = 'Hello, I would like to know more.';
 
-    // Detect if device is mobile
+    // Detect mobile
     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
     if (isMobile) {
-      // For mobile: use mailto: so Gmail app or default mail app opens
+      // Mobile → mail app opens
       window.location.href = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     } else {
-      // For desktop: open Gmail compose in browser
+      // Desktop → Gmail compose
       const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipientEmail}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       window.open(gmailUrl, '_blank');
     }
