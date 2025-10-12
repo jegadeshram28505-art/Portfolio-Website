@@ -1100,33 +1100,15 @@ footer {
 #contact-link i:hover {
   background-color: darkgreen; /* 🔹 Slightly darker on hover */
 }
-#mailIcon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  border-radius: 50%;
-  width: 48px;  
-  height: 48px; 
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  margin: 0 5px;
-  
 
-  vertical-align: middle; 
-}
-
-#mailIcon img {
-  width: 32px;
-  height: auto;
-}
-
+/* ஐகான்களைக் கட்டுப்படுத்தும் கண்டெய்னர் */
 .social-links-overlay {
   display: flex;
-  align-items: center; 
-  gap: 15px; 
+  align-items: center; /* எல்லா ஐகான்களையும் செங்குத்தாக நடுவில் வைக்கும் */
+  gap: 15px; /* ஐகான்களுக்கு இடையே உள்ள இடைவெளி */
 }
 
-
+/* எல்லா ஐகான்களுக்கும் பொதுவான ஸ்டைல் */
 .social-links-overlay a {
   display: inline-flex;
   align-items: center;
@@ -1142,13 +1124,13 @@ footer {
   transform: scale(1.1);
 }
 
-
+/* எல்லா ஐகான்களுக்குள் இருக்கும் படத்திற்கான அளவு */
 .social-links-overlay a img {
   width: 32px;
   height: auto;
 }
 
-
+/* Gmail ஐகானுக்கு மட்டும் வெள்ளை பின்னணி */
 #mailIcon {
   background-color: white;
 }
