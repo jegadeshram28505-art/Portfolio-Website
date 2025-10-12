@@ -1124,13 +1124,13 @@ footer {
   transform: scale(1.1);
 }
 
-/* எல்லா ஐகான்களுக்குள் இருக்கும் படத்திற்கான அளவு */
+
 .social-links-overlay a img {
   width: 32px;
   height: auto;
 }
 
-/* Gmail ஐகானுக்கு மட்டும் வெள்ளை பின்னணி */
+
 #mailIcon {
   background-color: white;
 }
