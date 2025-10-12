@@ -1061,7 +1061,7 @@ footer {
   background-color: hwb(228 0% 30%);
 }
 .social-links-overlay a[href*="mailto:"] {
-  background-color: #DB4437;
+  background-color: hsl(0, 7%, 92%);
 }
 .social-links-overlay a[href*="tel:"] {
   background-color: hwb(103 46% 7%);
@@ -1099,4 +1099,56 @@ footer {
 
 #contact-link i:hover {
   background-color: darkgreen; /* 🔹 Slightly darker on hover */
+}
+#mailIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  width: 48px;  
+  height: 48px; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 0 5px;
+  
+
+  vertical-align: middle; 
+}
+
+#mailIcon img {
+  width: 32px;
+  height: auto;
+}
+
+.social-links-overlay {
+  display: flex;
+  align-items: center; 
+  gap: 15px; 
+}
+
+
+.social-links-overlay a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  transition: transform 0.2s;
+}
+
+.social-links-overlay a:hover {
+  transform: scale(1.1);
+}
+
+
+.social-links-overlay a img {
+  width: 32px;
+  height: auto;
+}
+
+
+#mailIcon {
+  background-color: white;
 }
