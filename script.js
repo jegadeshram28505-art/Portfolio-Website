@@ -63,26 +63,28 @@ faders.forEach(fader => {
 // script.js
 const contactForm = document.querySelector(".contact-form");
 
-contactForm.addEventListener("submit", function(event) {
-  event.preventDefault(); // Page reload prevent
+// 👇 இந்த if கண்டிஷனை சேர்க்கவும்
+if (contactForm) {
+  contactForm.addEventListener("submit", function(event) {
+    event.preventDefault(); // Page reload prevent
 
-  // Form data get panna
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const phone = document.getElementById("phone").value;
-  const message = document.getElementById("message").value;
+    // Form data get panna
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const message = document.getElementById("message").value;
 
-  // Data object
-  const formData = {
-    name: name,
-    email: email,
-    phone: phone,
-    message: message
-  };
+    // Data object
+    const formData = {
+      name: name,
+      email: email,
+      phone: phone,
+      message: message
+    };
 
-  console.log("Contact Form Data Submitted:", formData); // Console la display aagum
-  alert("Form submitted! Check console.");
+    console.log("Contact Form Data Submitted:", formData); // Console la display aagum
+    alert("Form submitted! Check console.");
 
-  contactForm.reset(); // Form fields clear panna
-});
-
+    contactForm.reset(); // Form fields clear panna
+  });
+} // 👈 if கண்டிஷனை இங்கே முடிக்கவும்
